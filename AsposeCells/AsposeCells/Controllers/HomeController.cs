@@ -1,6 +1,7 @@
 ﻿using Aspose.Cells.GridWeb;
 using Aspose.Cells.GridWeb.Data;
 using Microsoft.AspNetCore.Mvc;
+using System.IO;
 
 namespace AsposeCells.Controllers
 {
@@ -26,6 +27,7 @@ namespace AsposeCells.Controllers
 
         public IActionResult Index()
         {
+            MainWeb.SessionStorePath = Path.Combine(Path.GetTempPath(), "CustomSessionStorePath");
             var gridWeb = GetGridWeb();
             return View("Index", gridWeb);
         }
