@@ -5,16 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\image.xlsx" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Remove="image.xlsx" />
-  </ItemGroup>
-
-  <ItemGroup>
     <EmbeddedResource Include="image.xlsx" />
-    <EmbeddedResource Include="wwwroot\image.xlsx" />
   </ItemGroup>
 
   <ItemGroup>

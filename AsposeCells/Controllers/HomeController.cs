@@ -2,6 +2,7 @@
 using Aspose.Cells.GridWeb.Data;
 using Microsoft.AspNetCore.Mvc;
 using System.IO;
+using System.Reflection;
 
 namespace AsposeCells.Controllers
 {
@@ -17,7 +18,8 @@ namespace AsposeCells.Controllers
             gridWeb.ResourceFilePath = "/acw_client/";
             gridWeb.EditMode = false;
 
-            gridWeb.ImportExcelFile("image.xlsx");
+            var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("AsposeCells.image.xlsx");
+            gridWeb.ImportExcelFile(stream);
 
             gridWeb.Width = Unit.Percentage(100);
             gridWeb.Height = Unit.Pixel(800);
