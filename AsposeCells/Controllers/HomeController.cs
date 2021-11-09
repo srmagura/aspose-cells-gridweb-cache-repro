@@ -27,7 +27,6 @@ namespace AsposeCells.Controllers
 
         public IActionResult Index()
         {
-            MainWeb.SessionStorePath = Path.Combine(Path.GetTempPath(), "CustomSessionStorePath");
             var gridWeb = GetGridWeb();
             return View("Index", gridWeb);
         }
