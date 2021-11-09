@@ -19,8 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Aspose.Cells.GridWeb" Version="21.10.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Aspose.Cells.GridWeb" Version="21.11.0" />
   </ItemGroup>
 
 </Project>
